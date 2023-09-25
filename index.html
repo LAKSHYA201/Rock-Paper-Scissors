@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors !</title>
+</head>
+<body>
+    <script>
+        let getComputerChoice= ()=>{
+            let randomiser= Math.floor(Math.random()*3);
+            if(randomiser==0){
+                return "rock";
+            }
+            else if(randomiser==1){
+                return "paper";
+            }
+            else {return "scissor";}
+        }
+        function playRound(playerSelection,computerSelection){
+            if(playerSelection=="rock"){
+                if(playerSelection=="rock" && computerSelection=="scissor"){
+                    return "User win";
+                }
+                else if(playerSelection=="rock" && computerSelection=="paper"){
+                    return "Computer Win";
+                }
+                else {return "Tie";}
+            }
+            else if(playerSelection=="paper"){
+                if(playerSelection=="paper" && computerSelection=="rock"){
+                    return "User win";
+                }
+                else if(playerSelection=="paper" && computerSelection=="scissor"){
+                    return "Computer win";
+                }
+                else {return "Tie";}
+            }
+            else if(playerSelection=="scissor"){
+                if(playerSelection=="scissor" && computerSelection=="paper"){
+                    return "User win";
+                }
+                else if(playerSelection=="scissor" && computerSelection=="rock"){
+                    return "Computer win";
+                }
+            else {return "Tie";}
+            }
+            else {return "INVALID";}
+        }
+
+        function game(){
+            let userWin=0;
+            let displayResult1=playRound(prompt("Enter your choice : Rock, Paper, Scissors :").toLowerCase(),getComputerChoice());
+            console.log(displayResult1);
+            if(displayResult1=="User win"){
+                userWin++;
+            }
+            else {}
+            let displayResult2=playRound(prompt("Enter your choice  : Rock, Paper, Scissors :").toLowerCase(),getComputerChoice());
+            console.log(displayResult2);
+            if(displayResult2=="User win"){
+                userWin++;
+            }
+            else {}
+            let displayResult3=playRound(prompt("Enter your choice  : Rock, Paper, Scissors :").toLowerCase(),getComputerChoice());
+            console.log(displayResult3);
+            if(displayResult3=="User win"){
+                userWin++;
+            }
+            else {}
+            let displayResult4=playRound(prompt("Enter your choice  : Rock, Paper, Scissors :").toLowerCase(),getComputerChoice());
+            console.log(displayResult4);
+            if(displayResult4=="User win"){
+                userWin++;
+            }
+            else {}
+            let displayResult5=playRound(prompt("Enter your choice  : Rock, Paper, Scissors :").toLowerCase(),getComputerChoice());
+            console.log(displayResult5);
+            if(displayResult5=="User win"){
+                userWin++;
+            }
+            else {}
+            console.log(`No. of Wins : ${userWin}`);
+            }
+        game();
+        
+    </script>
+    
+</body>
+</html>

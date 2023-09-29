@@ -89,3 +89,6 @@ button{
     height:30px;
     padding-top: 80px;
 }
+body{
+    zoom: 0.8;
+}

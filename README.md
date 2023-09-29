@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-a console based rock-paper-scissors (will be upgraded)
+Rock-paper-scissors (former console based) made into GUI version .
